@@ -1,22 +1,25 @@
-server:
-  port: 8096
-
 spring:
   application:
     name: userRepository-consumer
-  jpa:
-    generate-ddl: true
-    show-sql: true
-  profiles:
-    active:
-    - local
-  cloud:
-    services:
-      registrationMethod: route
+      
+---
+
+spring:
+  profiles: local
 logging:
   file: logs/claimprocessing.log
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8090/eureka/
+server:
+  port: 8096
+
+---
+
+spring:
+  profiles: pcf
+  cloud:
+    services:
+      registrationMethod: route
       
