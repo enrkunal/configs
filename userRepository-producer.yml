@@ -1,15 +1,32 @@
-server:
-  port: 8181
-
-claim_intake_service_name: claim-intake
-benefit_coding_service_name: benefit-coding
-claim_service_name: claim-serviceAAAA
 npi_lookup_url: "https://npiregistry.cms.hhs.gov/api"
-
-
 spring:
   application:
     name: userRepository-producer
+  profiles:
+    active:
+    - local
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+---
+
+spring:
+  profiles: pcf
+  cloud:
+    services:
+      registrationMethod: route
+  datasource:
+    url: jdbc:mysql://us-cdbr-iron-east-01.cleardb.net:3306/ad_172e5f618a59743
+    username: b5a5a982397e56
+    password: 0ad23374
+    driverClassName: com.mysql.jdbc.Driver
+claim_intake_service_name: claim-intakePCF
+benefit_coding_service_name: benefit-codingPCF
+claim_service_name: claim-serviceAAAAPCF
+---
+server:
+  port: 8181
+spring:
+  profiles: local
   datasource:
     url: jdbc:mysql://localhost:3306/sys
     username: root
@@ -19,27 +36,12 @@ spring:
     generate-ddl: true
     show-sql: true
     database-platform: org.hibernate.dialect.MySQL5Dialect
-  profiles:
-    active:
-    - local
-  cloud:
-    services:
-      registrationMethod: route
 logging:
   file: logs/claimprocessing.log
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8090/eureka/   
-      
----
-
-spring:
-  profiles: pcf
-  datasource:
-    url: jdbc:mysql://us-cdbr-iron-east-01.cleardb.net:3306/ad_172e5f618a59743
-    username: b5a5a982397e56
-    password: 0ad23374
-    driverClassName: com.mysql.jdbc.Driver
-  jpa:
-    database-platform: org.hibernate.dialect.MySQL5Dialect   
+      defaultZone: http://localhost:8090/eureka/ 
+claim_intake_service_name: claim-intakeLocal
+benefit_coding_service_name: benefit-codingLocal
+claim_service_name: claim-serviceAAAALocal
