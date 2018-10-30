@@ -8,7 +8,6 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.MySQL5Dialect
 ---
-
 spring:
   profiles: pcf
   cloud:
@@ -23,8 +22,6 @@ claim_intake_service_name: claim-intakePCF
 benefit_coding_service_name: benefit-codingPCF
 claim_service_name: claim-serviceAAAAPCF
 ---
-server:
-  port: 8181
 spring:
   profiles: local
   datasource:
@@ -45,3 +42,5 @@ eureka:
 claim_intake_service_name: claim-intakeLocal
 benefit_coding_service_name: benefit-codingLocal
 claim_service_name: claim-serviceAAAALocal
+server:
+  port: 8181
