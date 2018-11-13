@@ -21,7 +21,7 @@ spring:
     password: 0ad23374
     driverClassName: com.mysql.jdbc.Driver
 claim_intake_service_name: claim-intakePCF
-benefit_coding_service_name: benefit-codingPCF
+benefit_coding_service_name: '{cipher}8b85759dd5d43c46d148c384957bfae0b6d9e481427609d8ec734740d0da872a130631fec7272a5fbd7a7ea4313ef36fabca0061606526f368ded517980529fa'
 claim_service_name: claim-serviceAAAAPCF
 
 ---
@@ -44,7 +44,7 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8090/eureka/ 
 claim_intake_service_name: claim-intakeLocal
-benefit_coding_service_name: benefit-codingLocal
-claim_service_name: claim-serviceAAAALocal
+benefit_coding_service_name: '{cipher}6b2e0fcb6d86cbdbf018a017f886506e594a8fca8e9dbe1797d00d279d1391d7582e60951566ad66c6df270727741a93'
+claim_service_name: claim-serviceAAAALoc
 server:
   port: 8181
