@@ -44,7 +44,7 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8090/eureka/ 
 claim_intake_service_name: claim-intakeLocal
-benefit_coding_service_name: '{cipher}6b2e0fcb6d86cbdbf018a017f886506e594a8fca8e9dbe1797d00d279d1391d7582e60951566ad66c6df270727741a93'
+benefit_coding_service_name: '{cipher}6500f64edf4d8c3eff47c4c92560db686ecfe5973731b7aeff1c1989c76886f4dfccd70ab664f1cdb9499c795bf70c9e'
 claim_service_name: claim-serviceAAAALoc
 server:
   port: 8181
