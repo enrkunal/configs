@@ -21,7 +21,7 @@ spring:
     password: 0ad23374
     driverClassName: com.mysql.jdbc.Driver
 claim_intake_service_name: claim-intakePCF
-benefit_coding_service_name: '{cipher}015cfccb906b287f1d475a69e6d953b7df42401501731dc1f92de1c142974d0242b21444796499cfe0ed397a496bcf0c523992d0f78f091025720d875387e89e'
+benefit_coding_service_name: benefit-coding-service-name
 claim_service_name: claim-serviceAAAAPCF
 
 ---
