@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: user-local-test
+claim_intake_service_name: claim-intake_pcf
+benefit_coding_service_name: service-name_pcf
+claim_service_name: claim-service_pcf
+npi_lookup_url: "https://npiregistry.cms.hhs.gov/api"
