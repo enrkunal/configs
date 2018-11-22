@@ -4,4 +4,12 @@ spring:
 claim_intake_service_name: claim-intake_aa
 benefit_coding_service_name: service-name_aa
 claim_service_name: claim-service_aa
-npi_lookup_url: "https://npiregistry.cms.hhs.gov/api"
+npi_lookup_url: https://npiregistry.cms.hhs.gov/api
+universal: true
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: refresh
