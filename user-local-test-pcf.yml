@@ -1,7 +1,6 @@
 spring:
   application:
     name: user-local-test
-claim_intake_service_name: claim-intake_pcf2
 benefit_coding_service_name: service-name_pcf2
 claim_service_name: claim-service_pcf2
 npi_lookup_url: https://npiregistry.cms.hhs.gov/api2
