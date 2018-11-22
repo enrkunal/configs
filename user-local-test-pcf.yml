@@ -1,10 +1,10 @@
 spring:
   application:
     name: user-local-test
-claim_intake_service_name: claim-intake_pcf1
-benefit_coding_service_name: service-name_pcf1
-claim_service_name: claim-service_pcf1
-npi_lookup_url: https://npiregistry.cms.hhs.gov/api1
+claim_intake_service_name: claim-intake_pcf2
+benefit_coding_service_name: service-name_pcf2
+claim_service_name: claim-service_pcf2
+npi_lookup_url: https://npiregistry.cms.hhs.gov/api2
 management:
   security:
     enabled: false
